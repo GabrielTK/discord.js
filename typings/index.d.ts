@@ -1903,6 +1903,8 @@ declare module 'discord.js' {
       name: string,
       options: GuildCreateChannelOptions,
     ): Promise<TextChannel | VoiceChannel | CategoryChannel>;
+    public fetch(id: Snowflake, cache?: boolean, force?: boolean): Promise<GuildChannel | null>;
+    public fetch(id?: Snowflake, cache?: boolean, force?: boolean): Promise<Collection<Snowflake, GuildChannel>>;
   }
 
   export class GuildEmojiManager extends BaseGuildEmojiManager {
